@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salvo!</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- gamesCSS -->
+    <link rel="stylesheet" type="text/css" href="gamesCSS.css">
+    <link rel="stylesheet" href="trifoceFont Kit/stylesheet.css">
+</head>
+<body>
+<div class="container-fluid" id="games">
+
+    <!--Header-->
+
+    <div class="header row justify-content-between align-items-center" >
+
+        <div class="col-5 skull-kid-gif">
+            <img class="titleMajoras-gif" src="dist\Title_Majoras_transparent.png" alt="Title">
+        </div>
+        <!-- Log IN -->
+
+        <div class="col-5 registration">
+
+            <template v-if="jason.currentPlayer == 'GUEST' && !register">
+                <form id="login-form" onsubmit="login(event)">
+                    <label>Name: <input type="text" name="email"></label>
+                    <label>Password: <input type="password" name="password"></label>
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                </form>
+                <p>click here to <a href="#" onclick="regist()">REGISTER</a></p>
+            </template>
+
+            <!-- saludo y Log out -->
+
+            <template v-if="jason.currentPlayer.firstName">
+                <table>
+                    <tr>
+                        <td><h1 id="welcome"> Welcome {{jason.currentPlayer.firstName}} </h1></td>
+                        <td><button type="button" class="btn btn-primary" onclick="newGame()">NEW GAME</button></td>
+                        <td><form id="logout-form" onsubmit="logout(event)">
+                            <button type="submit" class="btn btn-primary">Log out</button>
+                        </form></td>
+                    </tr>
+                </table>
+            </template>
+
+            <!-- register -->
+
+            <template v-if="register">
+                <form id="register-form" onsubmit="register(event)">
+                    <table>
+                        <tr>
+                            <td><label>First Name: <input type="text" name="firstName"></label></td>
+                            <td><label>Last Name: <input type="text" name="lastName"></label></td>
+                        </tr>
+                        <tr>
+                            <td><label>Email: <input type="text" name="email"></label></td>
+                            <td><label>Password: <input type="password" name="password"></label></td>
+                        </tr>
+                    </table>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </template>
+
+        </div>
+    </div>
+
+    <!-- Body -->
+
+    <div class="row justify-content-center" >
+        <div class="col-6 scrollable">
+
+            <!-- Tabla de Puntuaciónes -->
+
+            <table class="table table-bordered">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Win</th>
+                        <th scope="col">Lost</th>
+                        <th scope="col">Tied</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="score in scores">
+                        <td>{{score.firstName + " " + score.lastName}}</td>
+                        <td>{{score.score}}</td>
+                        <td>{{score.won}}</td>
+                        <td>{{score.lost}}</td>
+                        <td>{{score.tied}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Listado de Juegos -->
+
+        <div class="col-6 scrollable gameList">
+            <ol class="list-group"  v-for="game in jason.games">
+                <li class="list-group-item" >
+                    Game: {{game.gameId}} -- Creation date: {{game.creationDate}} -- Game players:
+                    <ol class="list-group">
+                        <li class="list-group-item gamePlayerInfo" v-for="gp in game.gamePlayers">
+                            <p> Player: {{gp.player.id}} <a href=":mailto:gp.player.email">{{gp.player.email}}</a></p>
+
+                            <!-- botón para re-ingresar al juego -->
+
+                            <template class="gameButtons" v-if="(gp.player.email == jason.currentPlayer.email) && (game.state == 'inProgress')">
+                                <a :href="'/web/game.html?gp=' + gp.gamePlayerId"><button type="button" class="btn btn-primary">PLAY!</button></a>
+                            </template>
+
+                            <!-- botón para unirse a un juego -->
+
+                            <template  class="gameButtons" v-if="(jason.currentPlayer != 'GUEST') &&(gp.player.email != jason.currentPlayer.email) && (game.gamePlayers.length < 2)">
+                                <button type="button" class="btn btn-primary" @click="joinGame(game.gameId)">JOIN GAME!</button>
+                            </template>
+
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</body>
+
+<!--Vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<!-- Jqery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- games.js -->
+<script src="games.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>

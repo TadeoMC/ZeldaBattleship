@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ships Locations!</title>
+    <!-- Jqery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- boardCSS -->
+    <link rel="stylesheet" type="text/css" href="boardCSS.css">
+
+    <!-- gridstack pantalla de posicionar barcos-->
+    <link rel="stylesheet" href="dist/normalize.css" />
+    <link rel="stylesheet" href="dist/gridstack.css" />
+    <link rel="stylesheet" href="dist/gridstack-extra.css" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <link rel="stylesheet" href="dist/gameCSS.css" />
+    <link rel="stylesheet" href="trifoceFont Kit\stylesheet.css" />
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center" style="margin: 15px 0">
+        <div class="col-2">
+            <img class="majorasMaskGif" src="dist\Majoras_Mask.gif" alt="Majora's Mask">
+        </div>
+        <div class="col-8">
+            <div class="card" id="gameInfo">
+                <div class="card-body" style="text-align: center">
+                    <h3 class="card-title title"></h3>
+                    <button type="button" class="btn btn-primary" onclick="logout()" >logout</button>
+                    <p class="card-text"></p>
+                    <h4 class="card-title state"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <img class="majorasMaskGif" src="dist\Majoras_Mask.gif" alt="Majora's Mask">
+        </div>
+    </div>
+
+
+    <!-- Pantalla de juego -->
+
+    <div class="row">
+        <!-- tablero del jugador -->
+        <div id="miBoard" class="col-lg-6 col-12 text-center">
+            <h2 class="boardTitle">My Board</h2>
+            <div class="grid myGridBackground"></div>
+            <div  class="grid-ships">
+                <div id="gs-board" class="grid-stack grid-stack-10"></div>
+            </div>
+        </div>
+        <!-- Botón para guardar los barcos -->
+        <div id="saveBoats" class="col-6 text-center">
+            <button type="button" class="btn btn-primary" onclick="saveBoats()">Save Boats</button>
+        </div>
+        <!-- Tablero del enemigo -->
+        <div id="enemyBoard" class="col-lg-6 col-12 grid-col text-center" style="display: none">
+            <h2 class="boardTitle">Enemy Board</h2>
+            <div class="grid enemyFleet"></div>
+        </div>
+    </div>
+
+    <div class="row justify-content-end">
+        <div class="col-6 text-center">
+            <button type="button" class="btn btn-primary fireSalvoesBtn" onclick="fireSalvoes()">Fire Salvoes!!</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<!--Vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+<script src="dist/jquery-ui.min.js"></script>
+<script src="dist/gridstack.js"></script>
+<script src="dist/gridstack.jQueryUI.js"></script>
+<script src="dist/jquery.ui.touch-punch.min.js"></script>
+<!-- <script src="placeShips.js"></script> -->
+<!-- game.js -->
+<script src="game.js"></script>
+</html>

@@ -1,0 +1,52 @@
+body{
+    font-family: 'triforcetriforce';
+    background-image: url("dist/Wallpaper Skull_Kid.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    }
+
+.titleMajoras-gif{
+    height: 100px;
+}
+
+.header{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.table{
+    background-color: rgba(255,255,255,0.50);
+}
+
+.list-group-item{
+    background-color: rgba(255,255,255,0.65);
+}
+
+.scrollable{
+    height:70vh;
+    overflow-x: auto;
+}
+.registration{
+    color: white;
+}
+
+.registration h1{
+    margin: 0 0;
+    padding-top: 10px;
+}
+.registration button{
+    margin: 0 7px;
+}
+.gameList p{
+        margin: 0;
+        align-self: center;
+}
+.gameList .gameButtons{
+    right: 0;
+}
+.gameList .gamePlayerInfo{
+    display: flex;
+    justify-content: space-between;
+}

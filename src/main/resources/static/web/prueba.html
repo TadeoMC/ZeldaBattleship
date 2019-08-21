@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ships Locations!</title>
+    <!-- Jqery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- boardCSS -->
+    <link rel="stylesheet" type="text/css" href="boardCSS.css">
+
+    <!-- gridstack pantalla de posicionar barcos-->
+    <link rel="stylesheet" href="dist/normalize.css" />
+    <link rel="stylesheet" href="dist/gridstack.css" />
+    <link rel="stylesheet" href="dist/gridstack-extra.css" />
+    <link rel="stylesheet" href="dist/style.css" />
+
+</head>
+<body>
+
+<section class="darklue" id="demo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Tile drop</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 grid-container sidebar-scroll">
+                <div class="sidebar grid-stack-1"></div>
+            </div>
+            <div class="col-lg-10 grid-container">
+                <div class="grid-stack grid-stack-4"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+<!--Vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<!-- game.js -->
+<script src="game.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+<script src="dist/jquery-ui.min.js"></script>
+<script src="dist/gridstack.js"></script>
+<script src="dist/gridstack.jQueryUI.js"></script>
+<script src="dist/jquery.ui.touch-punch.min.js"></script>
+<script src="placeShips.js"></script>
+</html>

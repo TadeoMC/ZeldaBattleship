@@ -1,0 +1,90 @@
+.grid-stack-item-content {
+    opacity: 1;
+    background-repeat: no-repeat;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
+.rotateIcon {
+    height: 15px;
+    top: 0;
+    left: 0;
+}
+
+.rotateButton {
+    border: none;
+    background: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.carrierHor{
+   background-image: url('Fierce_Deity_Link_hor.png');
+   background-size: 100% 100%;
+ }
+
+ .carrierVer{
+    background-image: url('Fierce_Deity_Link_ver2.png');
+    background-size: 100% 100%;
+  }
+
+.battleshipHor{
+   background-image: url('Zora_Link_hor.png');
+   background-size: 100% 100%;
+ }
+
+ .battleshipVer{
+    background-image: url('Zora_Link_ver.png');
+    background-size: 100% 100%;
+  }
+
+.destroyerHor{
+   background-image: url('Goron_Link_hor.png');
+   background-size: 100% 100%;
+ }
+
+ .destroyerVer{
+    background-image: url('Goron_Link_ver.png');
+    background-size: 100% 100%;
+  }
+
+.submarineHor{
+    background-image: url('Young_Link_hor.png');
+    background-size: 100% 100%;
+}
+
+.submarineVer{
+    background-image: url('Young_Link_ver.png');
+    background-size: 100% 100%;
+}
+
+.patrolboatHor{
+    background-image: url('Deku_Link_hor.png');
+    background-size: 100% 100%;
+}
+
+.patrolboatVer{
+    background-image: url('Deku_Link_ver.png');
+    background-size: 100% 100%;
+    width: 45px !important;
+}
+
+.grid-ships{
+
+    position: relative;
+/*    background-color: rgba(255,255,255,0.25);
+    background-image: url("transparent_grid.png");*/
+    background-repeat: no-repeat;
+    background-size: 495px 495px;
+    padding-top: 45px;
+    padding-left: 45px;
+    height: 495px;
+    width: 495px;
+    margin: auto;
+}

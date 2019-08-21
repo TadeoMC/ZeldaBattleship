@@ -1,0 +1,26 @@
+body{
+    font-family: 'triforcetriforce';
+    width: 100%;
+    height: 100%;
+    background-image: url("Wallpaper_Majoras_Mask.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    }
+
+.boardTitle{
+    color: rgba(132,0,2,1);
+    font-size: 3.5rem;
+    margin: auto;
+}
+
+.card{
+    background-color:rgba(255,255,255,0.25);
+}
+
+.majorasMaskGif{
+    margin:auto;
+    height:150px;
+    width:150px;
+}

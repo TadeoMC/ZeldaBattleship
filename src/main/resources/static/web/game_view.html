@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/normalize.css" />
+        <link rel="stylesheet" href="dist/gridstack.css" />
+        <link rel="stylesheet" href="dist/gridstack-extra.css" />
+        <link rel="stylesheet" href="dist/style.css" />
+    </head>
+<body>
+    <!-- div solo para colocar el borde y posicionar en base a la altura y anchura-->
+    <div class="grid-ships">
+        <!-- div que usa la librería gridstack grid-stack-10 se indica que son 10 columnas-->
+        <div id="grid" class="grid-stack grid-stack-10">
+            <!--se agrega un elemento (widget) a la grilla-->
+            <!--data-gs-x y data-gs-y posicion de inicio -->
+            <!-- data-gs-width cuantas columnas ocupa data-gs-height cuantas filas ocupa -->
+           <!-- <div id="carrier" class="grid-stack-item"
+                data-gs-x="1" data-gs-y="1"
+                data-gs-width="3" data-gs-height="1">
+                    div contenerdor (acá se coloca la imagen de fondo, además se coloca el mouse como una mano, etc..)-->
+                    <!--<div class="grid-stack-item-content carrierHorizontal"></div>-->
+            </div>
+            <div id="patroal" class="grid-stack-item"
+                data-gs-x="4" data-gs-y="0"
+                data-gs-width="2" data-gs-height="1">
+                    <div class="grid-stack-item-content patroalHorizontal"></div>
+            </div>
+        </div>
+    </div>
+        <!-- libreria y demás dependencias-->
+        <script  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+        <script src="dist/jquery-ui.min.js"></script>
+        <script src="dist/gridstack.js"></script>
+        <script src="dist/gridstack.jQueryUI.js"></script>
+        <script src="dist/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="scripts/game_view.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>
